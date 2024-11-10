@@ -1,4 +1,4 @@
-// index.js
+// thisNode.js
 const http = require('http');
 
 const server = http.createServer((req, res) => {
@@ -7,9 +7,7 @@ const server = http.createServer((req, res) => {
   res.end('Global Warming!\n');
 });
 
-exports.myDateTime = function (){
-	return Date();
-};
+
 
 const PORT = 3000;
 server.listen(PORT, () => {
