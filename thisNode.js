@@ -6,7 +6,7 @@ const dt = require('./dateTime.js');  // Ensure you are importing correctly
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
-  res.write("The date and time are currently: " + dt.dateTime() + "\n");
+  res.write("The date and time are currently: " + dt.myDateTime() + "\n");  // Call the function with ()
   res.end('Global Warming!\n');
 });
 
