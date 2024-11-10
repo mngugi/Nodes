@@ -1,7 +1,14 @@
-var http = require('http');
+// index.js
+const http = require('http');
 
-http.createServer(function(req, res){;
-res.writeHead(200, {'Create-type':'text/html'});
-res.end("Global Warming!");
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Global Warming!\n');
+});
 
-}).listen(8080);
+const PORT = 3000;
+server.listen(PORT, () => {
+  console.log(`Server running at http://localhost:${PORT}/`);
+});
+
