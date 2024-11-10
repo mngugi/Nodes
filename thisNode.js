@@ -1,11 +1,12 @@
-// thisNode.js
+// app.js
 
 const http = require('http');
-const dt = require('./DateTimeModule.js')
+const dt = require('./DateTimeModule.js');  // Ensure you are importing correctly
+
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
-  res.write("The date and time are currently: " + dt.DateTimeModule());
+  res.write("The date and time are currently: " + dt.DateTimeModule() + "\n");
   res.end('Global Warming!\n');
 });
 
